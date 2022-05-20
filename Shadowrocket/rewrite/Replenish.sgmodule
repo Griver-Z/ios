@@ -1,1 +1,10 @@
-1
+#!name=Replenish
+#!desc=自用补充
+[URL Rewrite]
+#贴吧
+^https?://c\.tieba\.baidu\.com/\w+/\w+/(sync|newRnSync|mlog) - reject
+^https?:\/\/c\.tieba\.baidu\.com\/\w+\/\w+\/(sync|newRnSync|mlog) - reject-200
+^https?:\/\/c\.tieba\.baidu\.com\/c\/f\/forum\/getAdInfo - reject
+^https?:\/\/c\.tieba\.baidu\.com\/c\/p\/img\?src= - reject-img
+^https?:\/\/c\.tieba\.baidu\.com\/c\/s\/logtogether\?cmd= - reject-img
+^https?:\/\/c\.tieba\.baidu\.com\/c\/s\/splashSchedule - reject
