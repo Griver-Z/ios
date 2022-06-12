@@ -1,5 +1,12 @@
 #!name=Replenish
 #!desc=自用补充
+[RULE]
+#网易云音乐
+DOMAIN,img1.360buyimg.com,REJECT
+DOMAIN,g.cn.miaozhen.com,REJECT
+DOMAIN,ef-dongfeng.tanx.com,REJECT
+DOMAIN,ossgw.alicdn.com,REJECT
+DOMAIN,iadmusicmat.music.126.net,REJECT
 [URL Rewrite]
 #贴吧
 ^https?://c\.tieba\.baidu\.com/\w+/\w+/(sync|newRnSync|mlog) - reject
