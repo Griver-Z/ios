@@ -4,15 +4,15 @@ const REQUEST_HEADERS = {
     'Accept-Language': 'en',
 }
 
-// 即将登陆
+// About to log in
 const STATUS_COMING = 2
-// 支持解锁
+// Support unlock
 const STATUS_AVAILABLE = 1
-// 不支持解锁
+// Unlocking is not supported
 const STATUS_NOT_AVAILABLE = 0
-// 检测超时
+// Timeout
 const STATUS_TIMEOUT = -1
-// 检测异常
+// Abnormal
 const STATUS_ERROR = -2
 
 const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36'
@@ -20,10 +20,10 @@ const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (
 
   ;(async () => {
     let panel_result = {
-      title: '流媒体解锁检测',
+      title: 'Streaming Unlock Detection',
       content: '',
       icon: 'lock.open.display',
-      'icon-color': '#7FB3D5',
+      'icon-color': '#1B4F72',
     }
   let [{ region, status }] = await Promise.all([testDisneyPlus()])
     await Promise.all([check_youtube_premium(),check_netflix()])
@@ -32,17 +32,17 @@ const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (
  let disney_result=""
     if (status==STATUS_COMING) {
         //console.log(1)
-        disney_result="Disney+: 即将登陆~"+region.toUpperCase()
+        disney_result="Disney+: about to log in~"+region.toUpperCase()
       } else if (status==STATUS_AVAILABLE){
         //console.log(2)
         console.log(region)
-        disney_result="Disney+: 已解锁，区域: "+region.toUpperCase()
+        disney_result="Disney+: Unlocked，Region: "+region.toUpperCase()
         // console.log(result["Disney"])
       } else if (status==STATUS_NOT_AVAILABLE) {
         //console.log(3)
-        disney_result="Disney+: 未支持 🚫 "
+        disney_result="Disney+: Not supported 🚫 "
       } else if (status==STATUS_TIMEOUT) {
-        disney_result="Disney+: 检测超时 🚦"
+        disney_result="Disney+: Timeout 🚦"
       }
 result.push(disney_result)
 console.log(result)
