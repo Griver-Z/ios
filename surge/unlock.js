@@ -23,7 +23,7 @@ const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (
       title: 'Streaming Unlock Detection',
       content: '',
       icon: 'lock.open.display',
-      'icon-color': '#1B4F72',
+      'icon-color': '#1C6EA6',
     }
   let [{ region, status }] = await Promise.all([testDisneyPlus()])
     await Promise.all([check_youtube_premium(),check_netflix()])
