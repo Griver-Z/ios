@@ -2,9 +2,9 @@ const BASE_URL = 'https://www.youtube.com/premium'
 
 const DEFAULT_OPTIONS = {
   title: 'YouTube Premium Unlock detection',
-  availableContent: 'Support YouTube Premium➢Region：#REGION_CODE#',
+  availableContent: 'Support YouTube Premium➢#REGION_NAME#',
   availableIcon: '',
-  availableIconColor: '',
+  availableIconColor: '#18394F',
   availableStyle: 'good',
   notAvailableContent: 'Not support YouTube Premium',
   notAvailableIcon: '',
@@ -144,7 +144,7 @@ function replaceRegionPlaceholder(content, region) {
   }
 
   if (result.indexOf('#REGION_NAME#') !== -1) {
-    result = result.replaceAll('#REGION_NAME#', RESION_NAMES?.[region.toUpperCase()]?.chinese ?? '')
+    result = result.replaceAll('#REGION_NAME#', RESION_NAMES?.[region.toUpperCase()]?.english ?? '')
   }
 
   if (result.indexOf('#REGION_NAME_EN#') !== -1) {
