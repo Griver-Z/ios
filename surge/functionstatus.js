@@ -45,7 +45,7 @@ if(days==0){
     if(minutes==0)return(`${seconds}:`);
       return(`${minutes}:${seconds}:`)
     }
-    return(`${hours}h${minutes}:${seconds}:`)
+    return(`${hours}:${minutes}:${seconds}:`)
   }else {
         return(`${days}Day${hours}:${minutes}:`)
 	}
