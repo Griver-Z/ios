@@ -4,7 +4,7 @@ const DEFAULT_OPTIONS = {
   title: 'YouTube Premium Unlock detection',
   availableContent: 'Support YouTube Premium➢#REGION_NAME#',
   availableIcon: '',
-  availableIconColor: '4682B4',
+  availableIconColor: '',
   availableStyle: 'good',
   notAvailableContent: 'Not support YouTube Premium',
   notAvailableIcon: '',
@@ -26,7 +26,7 @@ let panel = {
     .then(region => {
       if (options.availableIcon) {
         panel['icon'] = options.availableIcon
-        panel['icon-color'] = options.availableIconColor ? options.availableIconColor : undefined
+        panel['icon-color'] = options.availableIconColor ? options.availableIconColor : #4682B4
       } else {
         panel['style'] = options.availableStyle
       }
