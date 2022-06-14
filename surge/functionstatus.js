@@ -15,7 +15,7 @@ if ($trigger == "button") {
 	$notification.post("Reload configuration","Reload configuration succeeded","")
 };
 $done({
-    title:"Surge has run:"+startTime,
+    title:"𝐒𝐮𝐫𝐠𝐞 𝐡𝐚𝐬 𝐫𝐮𝐧 : "+startTime,
     content:"Mitm:"+icon_status(mitm_status.enabled)+"  Rewrite:"+icon_status(rewrite_status.enabled)+"  Scripting:"+icon_status(scripting_status.enabled),
     icon: icon_s?"checkmark.seal":"exclamationmark.triangle",
    "icon-color":icon_s?"#16A951":"#FF7500"
@@ -47,7 +47,7 @@ if(days==0){
     }
     return(`${hours}H${minutes}m${seconds}s`)
   }else {
-        return(`${days}D${hours}H${minutes}m`)
+        return(`${days}Day${hours}h${minutes}m`)
 	}
 }
 function httpAPI(path = "", method = "POST", body = null) {
