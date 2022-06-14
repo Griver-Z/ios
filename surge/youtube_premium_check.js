@@ -2,7 +2,7 @@ const BASE_URL = 'https://www.youtube.com/premium'
 
 const DEFAULT_OPTIONS = {
   title: 'YouTube Premium Unlock detection',
-  availableContent: 'Support YouTube Premium➢egion：#REGION_FLAG# #REGION_NAME#',
+  availableContent: 'Support YouTube Premium➢Region：#REGION_CODE#',
   availableIcon: '',
   availableIconColor: '',
   availableStyle: 'good',
