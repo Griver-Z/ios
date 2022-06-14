@@ -32,11 +32,11 @@ const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (
  let disney_result=""
     if (status==STATUS_COMING) {
         //console.log(1)
-        disney_result="Disney+: about to log in~"+region.toUpperCase()
+        disney_result="Disney+: about to log in~" +`${getFlagEmoji(region)} `
       } else if (status==STATUS_AVAILABLE){
         //console.log(2)
         console.log(region)
-        disney_result="Disney+: Unlocked➢Region: "+region.toUpperCase()
+        disney_result="Disney+: Unlocked➢Region: " +`${getFlagEmoji(region)} `
         // console.log(result["Disney"])
       } else if (status==STATUS_NOT_AVAILABLE) {
         //console.log(3)
@@ -95,7 +95,7 @@ panel_result['content'] = content
         if (code === 'Not Available') {
           youtube_check_result += 'Not supported'
         } else {
-          youtube_check_result += 'Unlocked➢Region: ' + code.toUpperCase()
+          youtube_check_result += 'Unlocked➢Region: ' +`${getFlagEmoji(region)} `
         }
       })
       .catch((error) => {
@@ -151,7 +151,7 @@ panel_result['content'] = content
         if (code === 'Not Found') {
           return inner_check(80018499)
         }
-        netflix_check_result += 'Full unlock➢Region: ' + code.toUpperCase()
+        netflix_check_result += 'Full unlock➢Region: ' +`${getFlagEmoji(region)} `
         return Promise.reject('BreakSignal')
       })
       .then((code) => {
@@ -159,7 +159,7 @@ panel_result['content'] = content
           return Promise.reject('Not Available')
         }
   
-        netflix_check_result += 'Unlock homemade episodes➢Region: ' + code.toUpperCase()
+        netflix_check_result += 'Unlock homemade episodes➢Region: ' +`${getFlagEmoji(region)} `
         return Promise.reject('BreakSignal')
       })
       .catch((error) => {
