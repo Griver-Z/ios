@@ -4,7 +4,7 @@ const DEFAULT_OPTIONS = {
   title: 'YouTube Premium Unlock detection',
   availableContent: 'Support YouTube Premium➢#REGION_NAME#',
   availableIcon: '',
-  availableIconColor: '#18394F',
+  availableIconColor: '#4682B4',
   availableStyle: 'good',
   notAvailableContent: 'Not support YouTube Premium',
   notAvailableIcon: '',
