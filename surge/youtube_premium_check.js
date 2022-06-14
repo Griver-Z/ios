@@ -26,7 +26,7 @@ let panel = {
     .then(region => {
       if (options.availableIcon) {
         panel['icon'] = options.availableIcon
-        panel['icon-color'] = options.availableIconColor ? options.availableIconColor : #4682B4
+        panel['icon-color'] = options.availableIconColor ? options.availableIconColor : undefined
       } else {
         panel['style'] = options.availableStyle
       }
