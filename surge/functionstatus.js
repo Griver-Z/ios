@@ -42,12 +42,12 @@ let seconds=Math.round(leave3/1000)
 
 if(days==0){
   if(hours==0){
-    if(minutes==0)return(`${seconds}:`);
+    if(minutes==0)return(`${seconds}`);
       return(`${minutes}:${seconds}:`)
     }
-    return(`${hours}:${minutes}:${seconds}:`)
+    return(`${hours}:${minutes}:${seconds}`)
   }else {
-        return(`${days}Day${hours}:${minutes}:`)
+        return(`${days}Day${hours}:${minutes}`)
 	}
 }
 function httpAPI(path = "", method = "POST", body = null) {
