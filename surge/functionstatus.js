@@ -15,7 +15,7 @@ if ($trigger == "button") {
 	$notification.post("Reload configuration","Reload configuration succeeded","")
 };
 $done({
-    title:"𝐒𝐮𝐫𝐠𝐞 𝐡𝐚𝐬 𝐫𝐮𝐧 : "+startTime,
+    title:"𝗦𝘂𝗿𝗴𝗲 𝗵𝗮𝘀 𝗿𝘂𝗻 : "+startTime,
     content:"Mitm:"+icon_status(mitm_status.enabled)+"  Rewrite:"+icon_status(rewrite_status.enabled)+"  Scripting:"+icon_status(scripting_status.enabled),
     icon: icon_s?"checkmark.seal":"exclamationmark.triangle",
    "icon-color":icon_s?"#16A951":"#FF7500"
@@ -45,7 +45,7 @@ if(days==0){
     if(minutes==0)return(`${seconds}s`);
       return(`${minutes}m${seconds}s`)
     }
-    return(`${hours}H${minutes}m${seconds}s`)
+    return(`${hours}h${minutes}m${seconds}s`)
   }else {
         return(`${days}Day${hours}h${minutes}m`)
 	}
