@@ -15,7 +15,7 @@ if ($trigger == "button") {
 	$notification.post("Reload configuration","Reload configuration succeeded","")
 };
 $done({
-    title:"Surge  Already running"+startTime,
+    title:"Surge has run:"+startTime,
     content:"Mitm:"+icon_status(mitm_status.enabled)+"  Rewrite:"+icon_status(rewrite_status.enabled)+"  Scripting:"+icon_status(scripting_status.enabled),
     icon: icon_s?"checkmark.seal":"exclamationmark.triangle",
    "icon-color":icon_s?"#16A951":"#FF7500"
