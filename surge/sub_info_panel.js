@@ -40,10 +40,10 @@ let args = getArgs();
   let used = info.download + info.upload;
   let total = info.total;
   let expire = args.expire || info.expire;
-  let content = [`Used  ：${bytesToSize(used)} | ${bytesToSize(total)}`];
+  let content = [`Used：${bytesToSize(used)} | ${bytesToSize(total)}`];
 
   if (resetDayLeft) {
-    content.push(`Reset ：${resetDayLeft}Day`);
+    content.push(`Reset：${resetDayLeft}Day`);
   }
   if (expire && expire !== "false") {
     if (/^[\d.]+$/.test(expire)) expire *= 1000;
@@ -146,5 +146,5 @@ function formatTime(time) {
   let year = dateObj.getFullYear();
   let month = dateObj.getMonth() + 1;
   let day = dateObj.getDate();
-  return year + "/" + month + "/" + day + "/";
+  return year + "/" + month + "/" + day + " ";
 }
