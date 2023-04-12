@@ -43,7 +43,7 @@ let args = getArgs();
   let content = [`Used：${bytesToSize(used)} | ${bytesToSize(total)}`];
 
   if (resetDayLeft) {
-    content.push(`Reset：Timeleft${resetDayLeft}Day`);
+    content.push(`Reset：${resetDayLeft}Day`);
   }
   if (expire && expire !== "false") {
     if (/^[\d.]+$/.test(expire)) expire *= 1000;
@@ -146,5 +146,5 @@ function formatTime(time) {
   let year = dateObj.getFullYear();
   let month = dateObj.getMonth() + 1;
   let day = dateObj.getDate();
-  return year + "年" + month + "月" + day + "日";
+  return year + "/" + month + "/" + day + "/";
 }
