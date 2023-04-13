@@ -40,14 +40,14 @@ let args = getArgs();
   let used = info.download + info.upload;
   let total = info.total;
   let expire = args.expire || info.expire;
-  let content = [`Used：${bytesToSize(used)} |Total: ${bytesToSize(total)}`];
+  let content = [`𝗨𝘀𝗲𝗱：${bytesToSize(used)} | 𝗧𝗼𝘁𝗮𝗹: ${bytesToSize(total)}`];
 
   if (resetDayLeft) {
-    content.push(`Reset：${resetDayLeft}Day`);
+    content.push(`𝗥𝗲𝘀𝗲𝘁：${resetDayLeft}Day`);
   }
   if (expire && expire !== "false") {
     if (/^[\d.]+$/.test(expire)) expire *= 1000;
-    content.push(`Time：${formatTime(expire)}`);
+    content.push(`𝗧𝗶𝗺𝗲：${formatTime(expire)}`);
   }
 
   let now = new Date();
