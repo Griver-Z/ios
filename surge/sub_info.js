@@ -15,7 +15,7 @@
   let used = info.download + info.upload;
   let total = info.total;
   let expire = args.expire || info.expire;
-  let content = [`𝗨𝘀𝗲𝗱：${toPercent(used, total)} \t|  𝗧𝗼𝘁𝗮𝗹：${toMultiply(total, used)}`];
+  let content = [`𝗨𝘀𝗲𝗱：${toPercent(used, total)} \t|  𝗟𝗮𝘀𝘁：${toMultiply(total, used)}`];
 
   if (resetDayLeft || expire) {
     if (resetDayLeft && expire && expire !== "false") {
