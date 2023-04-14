@@ -25,7 +25,7 @@
       content.push(`𝗥𝗲𝘀𝗲：${resetDayLeft}day`);
     } else if (!resetDayLeft && expire) {
       if (/^[\d.]+$/.test(expire)) expire *= 1000;
-      content.push(`𝗧𝗶𝗺𝗲：${formatTime(expire)}`);
+      content.push(`𝗧𝗶𝗺𝗲 timer：${formatTime(expire)}`);
     }
   }
 
