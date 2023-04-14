@@ -16,7 +16,7 @@ if ($trigger == "button") {
 };
 $done({
     title:"Surge running ➢ "+startTime,
-    content:"Mitm:"+icon_status(mitm_status.enabled)+"  Rewrite:"+icon_status(rewrite_status.enabled)+"  Scripting:"+icon_status(scripting_status.enabled),
+    content:"𝗠𝗶𝘁𝗺:"+icon_status(mitm_status.enabled)+"  𝗥𝗲𝘄𝗿𝗶𝘁𝗲:"+icon_status(rewrite_status.enabled)+"  𝗦𝗰𝗿𝗶𝗽𝘁𝗶𝗻𝗴:"+icon_status(scripting_status.enabled),
     icon: icon_s?"externaldrive.badge.checkmark":"exclamationmark.triangle",
    "icon-color":icon_s?"#6b926b":"#FF0E06"
 });
