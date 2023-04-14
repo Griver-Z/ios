@@ -20,9 +20,9 @@
   if (resetDayLeft || expire) {
     if (resetDayLeft && expire && expire !== "false") {
       if (/^[\d.]+$/.test(expire)) expire *= 1000;
-      content.push(`𝗥𝗲𝘀𝗲：${resetDayLeft}day \t|  ${formatTime(expire)}`);
+      content.push(`𝗥𝗲𝘀𝗲𝘁：${resetDayLeft}day \t|  ${formatTime(expire)}`);
     } else if (resetDayLeft && !expire) {
-      content.push(`𝗥𝗲𝘀𝗲：${resetDayLeft}day`);
+      content.push(`𝗥𝗲𝘀𝗲𝘁：${resetDayLeft}day`);
     } else if (!resetDayLeft && expire) {
       if (/^[\d.]+$/.test(expire)) expire *= 1000;
       content.push(`𝗧𝗶𝗺𝗲：${formatTime(expire)}`);
